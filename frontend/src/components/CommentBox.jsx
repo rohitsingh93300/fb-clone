@@ -15,7 +15,7 @@ const CommentBox = ({ post, formatFBTime }) => {
 
     const postCommentHandler = async (id) => {
         try {
-            const res = await axios.post(`http://localhost:8000/api/v1/comment/${id}/create`, { content }, {
+            const res = await axios.post(`https://fb-clone-726q.onrender.com/api/v1/comment/${id}/create`, { content }, {
                 headers: {
                     "Content-Type": "application/json"
                 },
@@ -33,7 +33,7 @@ const CommentBox = ({ post, formatFBTime }) => {
 
     const deleteCommentHandler = async (id) => {
         try {
-            const res = await axios.delete(`http://localhost:8000/api/v1/comment/${id}/delete`, { withCredentials: true })
+            const res = await axios.delete(`https://fb-clone-726q.onrender.com/api/v1/comment/${id}/delete`, { withCredentials: true })
             if (res.data.success) {
                 toast.success(res.data.message)
             }
@@ -46,7 +46,7 @@ const CommentBox = ({ post, formatFBTime }) => {
     const likeCommentHandler = async (commentId) => {
         try {
             const res = await axios.post(
-                `http://localhost:8000/api/v1/comment/${commentId}/like`, {},
+                `https://fb-clone-726q.onrender.com/api/v1/comment/${commentId}/like`, {},
                 {
                     withCredentials: true
                 }
@@ -69,7 +69,7 @@ const CommentBox = ({ post, formatFBTime }) => {
 
     const editCommentHandler = async (commentId) => {
         try {
-            const res = await axios.put(`http://localhost:8000/api/v1/comment/${commentId}/edit`, { content }, {
+            const res = await axios.put(`https://fb-clone-726q.onrender.com/api/v1/comment/${commentId}/edit`, { content }, {
                 headers: {
                     "Content-Type": "application/json"
                 },

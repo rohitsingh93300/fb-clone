@@ -87,7 +87,7 @@ const StoryBar = () => {
     if (file) formData.append("file", file);
 
     try {
-      const res = await axios.post(`http://localhost:8000/api/v1/story/create`, formData, {
+      const res = await axios.post(`https://fb-clone-726q.onrender.com/api/v1/story/create`, formData, {
         headers: {
           "Content-Type": "multipart/form-data"
         },
@@ -109,7 +109,7 @@ const StoryBar = () => {
 
   const getAllStories = async () => {
     try {
-      const res = await axios.get(`http://localhost:8000/api/v1/story/all`, { withCredentials: true })
+      const res = await axios.get(`https://fb-clone-726q.onrender.com/api/v1/story/all`, { withCredentials: true })
       if (res.data.success) {
         setAllStory(res.data.stories)
         setTimeout(checkScrollPosition, 100);

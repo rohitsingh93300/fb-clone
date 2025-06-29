@@ -13,7 +13,7 @@ const MidHome = () => {
 
     const getAllPost = async () => {
         try {
-            const res = await axios.get(`http://localhost:8000/api/v1/post/getallpost`)
+            const res = await axios.get(`https://fb-clone-726q.onrender.com/api/v1/post/getallpost`)
             if (res.data.success) {
                dispatch(setPosts(res.data.posts)) 
                

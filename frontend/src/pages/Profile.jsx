@@ -28,7 +28,7 @@ const Profile = () => {
 
     const fetchUserProfile = async () => {
         try {
-            const res = await axios.get(`http://localhost:8000/api/v1/auth/${params.id}/profile`)
+            const res = await axios.get(`https://fb-clone-726q.onrender.com/api/v1/auth/${params.id}/profile`)
             if (res.data.success) {
                 dispatch(setUserProfile(res.data.user))
                 console.log(res.data.user);
@@ -52,7 +52,7 @@ const Profile = () => {
         try {
             dispatch(setLoading(true))
             const res = await axios.put(
-                `http://localhost:8000/api/v1/auth/update/profile-pic`,
+                `https://fb-clone-726q.onrender.com/api/v1/auth/update/profile-pic`,
                 formData,
                 {
                     headers: {
@@ -87,7 +87,7 @@ const Profile = () => {
         try {
             dispatch(setLoading(true))
             const res = await axios.put(
-                `http://localhost:8000/api/v1/auth/update/cover-pic`,
+                `https://fb-clone-726q.onrender.com/api/v1/auth/update/cover-pic`,
                 formData,
                 {
                     headers: {
@@ -115,7 +115,7 @@ const Profile = () => {
 
     const sendFriendRequest = async (id) => {
         try {
-            const res = await axios.put(`http://localhost:8000/api/v1/auth/request/send/${id}`, {}, {
+            const res = await axios.put(`https://fb-clone-726q.onrender.com/api/v1/auth/request/send/${id}`, {}, {
                 withCredentials: true
             })
             if (res.data.success) {
@@ -131,7 +131,7 @@ const Profile = () => {
 
     const acceptFriendRequest = async (id) => {
         try {
-            const res = await axios.put(`http://localhost:8000/api/v1/auth/request/accept/${id}`, {}, {
+            const res = await axios.put(`https://fb-clone-726q.onrender.com/api/v1/auth/request/accept/${id}`, {}, {
                 withCredentials: true
             })
             if (res.data.success) {
@@ -147,7 +147,7 @@ const Profile = () => {
 
     const getCancelFriendRequest = async (id) => {
         try {
-            const res = await axios.put(`http://localhost:8000/api/v1/auth/request/cancel/${id}`, {}, { withCredentials: true })
+            const res = await axios.put(`https://fb-clone-726q.onrender.com/api/v1/auth/request/cancel/${id}`, {}, { withCredentials: true })
             if (res.data.success) {
                 dispatch(setUser(res.data.user))
                 dispatch(setUserProfile(res.data.userProfile))
@@ -162,7 +162,7 @@ const Profile = () => {
 
     const rejectFriendRequest = async (id) => {
         try {
-            const res = await axios.put(`http://localhost:8000/api/v1/auth/request/reject/${id}`, {}, { withCredentials: true })
+            const res = await axios.put(`https://fb-clone-726q.onrender.com/api/v1/auth/request/reject/${id}`, {}, { withCredentials: true })
             if (res.data.success) {
                 dispatch(setUser(res.data.user))
                 dispatch(setUserProfile(res.data.userProfile))
@@ -176,7 +176,7 @@ const Profile = () => {
 
     const unFriendUser = async (id) => {
         try {
-            const res = await axios.put(`http://localhost:8000/api/v1/auth/unfriend/${id}`, {}, { withCredentials: true })
+            const res = await axios.put(`https://fb-clone-726q.onrender.com/api/v1/auth/unfriend/${id}`, {}, { withCredentials: true })
             if (res.data.success) {
                 dispatch(setUser(res.data.user))
                 dispatch(setUserProfile(res.data.userProfile))
@@ -189,7 +189,7 @@ const Profile = () => {
     }
     const unFollowUser = async (id) => {
         try {
-            const res = await axios.put(`http://localhost:8000/api/v1/auth/unfollow/${id}`, {}, { withCredentials: true })
+            const res = await axios.put(`https://fb-clone-726q.onrender.com/api/v1/auth/unfollow/${id}`, {}, { withCredentials: true })
             if (res.data.success) {
                 dispatch(setUser(res.data.user))
                 dispatch(setUserProfile(res.data.userProfile))
@@ -202,7 +202,7 @@ const Profile = () => {
     }
     const followUser = async (id) => {
         try {
-            const res = await axios.put(`http://localhost:8000/api/v1/auth/follow/${id}`, {}, { withCredentials: true })
+            const res = await axios.put(`https://fb-clone-726q.onrender.com/api/v1/auth/follow/${id}`, {}, { withCredentials: true })
             if (res.data.success) {
                 dispatch(setUser(res.data.user))
                 dispatch(setUserProfile(res.data.userProfile))

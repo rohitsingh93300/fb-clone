@@ -94,7 +94,7 @@ const Intro = () => {
        console.log(introData);
        try {
         setLoadingIntro(true)
-        const res = await axios.put(`http://localhost:8000/api/v1/auth/update-intro`,introData,{
+        const res = await axios.put(`https://fb-clone-726q.onrender.com/api/v1/auth/update-intro`,introData,{
             headers:{
                 "Content-Type":"application/json"
             },

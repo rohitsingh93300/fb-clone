@@ -24,7 +24,7 @@ const Login = () => {
        e.preventDefault()
        console.log(formData);
        try {
-            const response = await axios.post(`http://localhost:8000/api/v1/auth/login`, formData, {
+            const response = await axios.post(`https://fb-clone-726q.onrender.com/api/v1/auth/login`, formData, {
                 headers: {
                     "Content-Type": "application/json",
                 },

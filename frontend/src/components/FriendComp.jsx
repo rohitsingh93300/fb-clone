@@ -10,7 +10,7 @@ const FriendComp = ({friends}) => {
     const navigate = useNavigate()
     // const getAllFriends = async()=>{
     //     try {
-    //         const res = await axios.get(`http://localhost:8000/api/v1/auth/user/${user._id}/friends`)
+    //         const res = await axios.get(`https://fb-clone-726q.onrender.com/api/v1/auth/user/${user._id}/friends`)
     //         if(res.data.success){
     //             setFriends(res.data.friends)
     //         }
@@ -47,6 +47,6 @@ const FriendComp = ({friends}) => {
   )
 }
 
-// http://localhost:8000/api/v1/auth/requests/mutual
+// https://fb-clone-726q.onrender.com/api/v1/auth/requests/mutual
 
 export default FriendComp

@@ -42,7 +42,7 @@ const Navbar = () => {
     }
 
     try {
-      const res = await axios.get(`http://localhost:8000/api/v1/auth/search?q=${value}`,{withCredentials:true});
+      const res = await axios.get(`https://fb-clone-726q.onrender.com/api/v1/auth/search?q=${value}`,{withCredentials:true});
       if (res.data.success) {
         setSuggestions(res.data.users);
       }
@@ -53,7 +53,7 @@ const Navbar = () => {
 
   const logoutHandler = async () => {
     try {
-      const res = await axios.get(`http://localhost:8000/api/v1/auth/logout`)
+      const res = await axios.get(`https://fb-clone-726q.onrender.com/api/v1/auth/logout`)
       if (res.data.success) {
         dispatch(setUser(null))
         toast.success(res.data.message)

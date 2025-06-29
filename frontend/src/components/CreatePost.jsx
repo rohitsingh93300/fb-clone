@@ -48,7 +48,7 @@ const CreatePost = ({setRefreshPosts}) => {
         if (file) formData.append("file", file);
 
         try {
-            const res = await axios.post(`http://localhost:8000/api/v1/post/create`, formData, {
+            const res = await axios.post(`https://fb-clone-726q.onrender.com/api/v1/post/create`, formData, {
                 headers: {
                     "Content-Type": "multipart/form-data"
                 },

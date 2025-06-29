@@ -19,7 +19,7 @@ const Friends = () => {
 
     const getFriendRequest = async () => {
         try {
-            const res = await axios.get(`http://localhost:8000/api/v1/auth/requests`, { withCredentials: true })
+            const res = await axios.get(`https://fb-clone-726q.onrender.com/api/v1/auth/requests`, { withCredentials: true })
             if (res.data.success) {
                 setAllRequest(res.data.requests)
             }
@@ -31,7 +31,7 @@ const Friends = () => {
 
     const getPeopleYouMayKnow = async () => {
         try {
-            const res = await axios.get(`http://localhost:8000/api/v1/auth/suggestions`, { withCredentials: true })
+            const res = await axios.get(`https://fb-clone-726q.onrender.com/api/v1/auth/suggestions`, { withCredentials: true })
             if (res.data.success) {
                 setPeopleYouMayKnow(res.data.suggestions)
             }
@@ -42,7 +42,7 @@ const Friends = () => {
 
     const acceptFriendRequest = async (id) => {
         try {
-            const res = await axios.put(`http://localhost:8000/api/v1/auth/request/accept/${id}`, {}, {
+            const res = await axios.put(`https://fb-clone-726q.onrender.com/api/v1/auth/request/accept/${id}`, {}, {
                 withCredentials: true
             })
             if (res.data.success) {
@@ -58,7 +58,7 @@ const Friends = () => {
 
      const sendFriendRequest = async (id) => {
         try {
-            const res = await axios.put(`http://localhost:8000/api/v1/auth/request/send/${id}`, {}, {
+            const res = await axios.put(`https://fb-clone-726q.onrender.com/api/v1/auth/request/send/${id}`, {}, {
                 withCredentials: true
             })
             if (res.data.success) {
@@ -74,7 +74,7 @@ const Friends = () => {
 
     const getCancelFriendRequest = async(id)=>{
         try {
-            const res = await axios.put(`http://localhost:8000/api/v1/auth/request/cancel/${id}`,{},{withCredentials:true})
+            const res = await axios.put(`https://fb-clone-726q.onrender.com/api/v1/auth/request/cancel/${id}`,{},{withCredentials:true})
             if(res.data.success){
                 dispatch(setUser(res.data.user))
                 dispatch(setUserProfile(res.data.userProfile))
@@ -88,7 +88,7 @@ const Friends = () => {
 
        const rejectFriendRequest = async(id)=>{
         try {
-           const res = await axios.put(`http://localhost:8000/api/v1/auth/request/reject/${id}`, {}, { withCredentials: true })
+           const res = await axios.put(`https://fb-clone-726q.onrender.com/api/v1/auth/request/reject/${id}`, {}, { withCredentials: true })
             if (res.data.success) {
                 dispatch(setUser(res.data.user))
                 dispatch(setUserProfile(res.data.userProfile))
